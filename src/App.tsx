@@ -19,6 +19,15 @@ import ImageGrid from './components/imagegrid';
 
 function App() {
 
+  const names = [{
+    title: "Rutvij Wamanse"
+  },
+  {
+    title: "Pranav Pawar"
+  },
+  {
+    title: "Chirag Patil"
+  }]
   const images = [
     cvimg1,
   ];
@@ -80,7 +89,7 @@ function App() {
 
   const mainFeaturedPost5 = {
     title: 'Experiment and Results',
-    description: "\nThe <a href='https://www.kaggle.com/datasets/jayaprakashpondy/soil-image-dataset'>dataset</a> consists of 4 classes and total of 1563 images"
+    description: "\nThe <a href='https://www.kaggle.com/datasets/jayaprakashpondy/soil-image-dataset'>dataset</a> that we will be using consists of 4 classes and total of 1563 images"
     , linkText: 'dataset',
 
   }
@@ -100,19 +109,22 @@ function App() {
     ],
     columns: ['Class', 'TrainSet', 'TestSet'],
     containerStyle: {
-      backgroundColor: '#DFD7BF',
+      backgroundColor: '#F2EAD3',
       border: '1px solid #3F2305',
       padding: '1rem rem',
       width: "65%",
       margin: "0rem 10rem",
-      justifyContent: "center"
+      justifyContent: "center",
+
     },
     cellStyle: {
-      backgroundColor: '#DFD7BF',
+      backgroundColor: '#F2EAD3',
       borderBottom: '1px solid #ccc',
       verticalAlign: 'middle',
       textAlign: 'center' as const,
-      fontSize: "16px"
+      fontSize: "16px",
+      color: "#3F2305",
+
     }
   }
 
@@ -127,7 +139,7 @@ function App() {
   return (
     <>
       <div className='container'>
-        <div className="header"><Header title="Soil Texture Classification" /></div>
+        <div className="header"><Header title="Soil Type Classification using Computer Vision" sections={names} /></div>
         {/* <Container>  */}
         <MainFeaturedPost post={mainFeaturedPost} />
         <MainFeaturedPost post={mainFeaturedPost2} />
