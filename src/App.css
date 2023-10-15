@@ -16,12 +16,22 @@
 .container {
   padding: 2.5rem 2.5rem;
   background-color: #F2EAD3;
+  font-size: 30rem;
   /* color: white; */
+}
+
+.text-body {
+  text-align: justify;
+  padding-right: 25px;
 }
 
 .card {
   margin-top: 1rem;
   border-radius: 50px;
+}
+
+.columns {
+  font-size: 17.5px !important;
 }
 
 .image {

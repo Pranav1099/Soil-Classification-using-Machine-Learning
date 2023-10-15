@@ -9,38 +9,38 @@ import ImageGrid from './imagegrid';
 
 interface FeaturedPostProps {
     post: {
-        date: string;
+        date?: string;
         description: string;
         title: string;
+        images?: any
     };
-    images: Array<string>
 }
 
 export default function FeaturedPost(props: FeaturedPostProps) {
-    const { post, images } = props;
-
+    const { post } = props;
+    const paragraphs = post.description.split('\n').map((paragraph, index) => (
+        <p key={index}>{paragraph}</p>
+    ));
     return (
         <Grid item xs={12} md={6} >
-            <CardActionArea component="a" href="#">
-                <Card sx={{ display: 'flex', backgroundColor: "#DFD7BF" }}>
-                    <CardContent >
-                        <Grid item xs={12} md={12} >
-                            <Typography component="h2" variant="h5">
-                                {post.title}
-                            </Typography>
-                            <Typography variant="subtitle1" color="text.secondary">
-                                {post.date}
-                            </Typography>
-                            <Typography variant="subtitle1" paragraph>
-                                {post.description}
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} md={12} >
-                            <ImageGrid images={images} />
-                        </Grid>
-                    </CardContent>
-                </Card>
-            </CardActionArea>
+            <Card sx={{ display: 'flex', backgroundColor: "#DFD7BF", boxShadow: "none" }}>
+                <CardContent >
+                    <Grid item xs={12} md={12} >
+                        <Typography component="h2" variant="h5">
+                            {post.title}
+                        </Typography>
+                        <Typography variant="subtitle1" color="text.secondary">
+                            {post.date}
+                        </Typography>
+                        <Typography variant="subtitle1" paragraph>
+                            {paragraphs}
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={12} >
+                        <ImageGrid images={post.images} />
+                    </Grid>
+                </CardContent>
+            </Card>
         </Grid>
     );
 }
