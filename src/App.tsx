@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import Header from './components/header/header';
 import MainFeaturedPost from './components/mainfeature';
-import soil from './static/soil.jpg'; // Import the image
-import cnnf from './static/cnnff.jpg'; // Import the image
 import cnnfm from './static/cnnffm.jpg';
 import cvimg1 from './static/cvimg1.jpg';
 import cv2m from './static/cv2m.jpg';
@@ -20,14 +18,16 @@ import ImageGrid from './components/imagegrid';
 function App() {
 
   const names = [{
-    title: "Rutvij Wamanse"
+    title: "Rutvij Wamanse - rutvijw"
   },
   {
-    title: "Pranav Pawar"
+    title: "Pranav Pawar - pranav1099"
   },
   {
-    title: "Chirag Patil"
+    title: "Chirag Patil - chiragpatil"
   }]
+
+
   const images = [
     cvimg1,
   ];
@@ -50,13 +50,13 @@ function App() {
     {
       title: 'Machine Learning using Image Processing',
       description:
-        "First Approach involves employing image processing and computer vision techniques on the captured soil sample images, followed by classifying them using machine learning models like XGBoost, Random Forest, Decision Trees, and SVM classification. Image processing methods will include image segmentation to extract the region of interest from the soil images and feature extraction using Gabor wavelet filters, along with the utilization of color histograms within both RGB and HSV color spaces.\n Gabor filters are a class of linear filters used for feature extraction in images, particularly in the fields of image processing and computer vision. They are designed to capture texture and edge information within an image. We will be using it to capture textural characteristics of different types of soils. These filters have proven to excel in effectively localizing features within both spatial and frequency domains, making them ideal for addressing texture segmentation tasks.\nColor histograms are a common and effective way to characterize the distribution of colors within an image. We will be extracting color features from soil images by analyzing RGB histograms to identify the presence and distribution of specific colors in an image and HSV histograms to capture information about color and intensity separately so we can distinguish between different shades of a color based on the hue identify vivid colors using the saturation channel\n   "
+        "First Approach involves employing image processing and computer vision techniques on the captured soil sample images, followed by classifying them using machine learning models like XGBoost, Random Forest, Decision Trees, and SVM classification. Image processing methods will include image segmentation to extract the region of interest from the soil images and feature extraction using Gabor wavelet filters, along with the utilization of color histograms within both RGB and HSV color spaces.\n <a href='https://www.sciencedirect.com/science/article/pii/S2214317318301239#b0040'>Gabor filters<sup>1</sup></a> are a class of linear filters used for feature extraction in images, particularly in the fields of image processing and computer vision. They are designed to capture texture and edge information within an image. We will be using it to capture textural characteristics of different types of soils. These filters have proven to excel in effectively localizing features within both spatial and frequency domains, making them ideal for addressing texture segmentation tasks.\n <a href='https://www.sciencedirect.com/science/article/pii/S1474667015310338'>Color histograms<sup>2</sup></a> are a common and effective way to characterize the distribution of colors within an image. We will be extracting color features from soil images by analyzing RGB histograms to identify the presence and distribution of specific colors in an image and HSV histograms to capture information about color and intensity separately so we can distinguish between different shades of a color based on the hue identify vivid colors using the saturation channel\n   "
       , images: images
     },
     {
       title: 'Convolutional Neural Network',
       description:
-        "Our second approach will be using deep learning models like Convolutional Neural Networks which differ from the traditional machine learning models in its ability to perform automatic feature extraction which reduces the need for manual image processing techniques. It is designed to automatically learn hierarchical features directly from the raw image data.\n They owe their name to the key operation they employ, convolution, which involves sliding small filters or kernels across the input data to extract local patterns and features. This hierarchical approach allows CNNs to recognize complex structures by composing simpler patterns, making them highly efficient for understanding visual information.\n We will be comparing the results of both the techniques by using appropriate metrics"
+        "Our second approach will be using deep learning models like <a href='https://dl.acm.org/doi/10.1145/3065386'>Convolutional Neural Networks<sup>3</sup></a> which differ from the traditional machine learning models in its ability to perform automatic feature extraction which reduces the need for manual image processing techniques. It is designed to automatically learn hierarchical features directly from the raw image data.\n They owe their name to the key operation they employ, convolution, which involves sliding small filters or kernels across the input data to extract local patterns and features. This hierarchical approach allows CNNs to recognize complex structures by composing simpler patterns, making them highly efficient for understanding visual information.\n We will be comparing the results of both the techniques by using appropriate metrics"
       , images: approachImages
     }
   ];
@@ -84,6 +84,13 @@ function App() {
   const mainFeaturedPost3 = {
     title: 'Our Approach',
     description: ""
+
+  }
+
+  const ref = {
+    title: 'References',
+    description:
+      " 1. Barman, Utpal, and Ridip Dev Choudhury. “Soil Texture Classification Using Multi Class Support Vector Machine.” Information Processing in Agriculture 7, no. 2 (June 2020): 318–32. https://doi.org/10.1016/j.inpa.2019.08.001.\n 2. Chung, Sun-Ok, Ki-Hyun Cho, Jae-Woong Kong, Kenneth A. Sudduth, and Ki-Youl Jung. “Soil Texture Classification Algorithm Using RGB Characteristics of Soil Images.” IFAC Proceedings Volumes 43, no. 26 (2010): 34–38. https://doi.org/10.3182/20101206-3-JP-3009.00005.\n 3. Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. “ImageNet Classification with Deep Convolutional Neural Networks.” Communications of the ACM 60, no. 6 (May 24, 2017): 84–90. https://doi.org/10.1145/3065386."
 
   }
 
@@ -161,6 +168,7 @@ function App() {
             </Typography>
           </>
         } />
+        <MainFeaturedPost post={ref} />
       </div>
     </>
 

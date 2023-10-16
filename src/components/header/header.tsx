@@ -16,17 +16,20 @@ export default function Header(props: HeaderProps) {
     return (
         <React.Fragment>
             <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-
-                <Typography
-                    component="h2"
-                    variant="h4"
-                    color="#3F2305"
-                    align="center"
-                    noWrap
-                    sx={{ flex: 1, paddingLeft: "7rem", fontWeight: "550" }}
-                >
-                    {title}
-                </Typography>
+                <Grid container style={{ justifyContent: "center" }}>
+                    <Grid item>
+                        <Typography
+                            component="h2"
+                            variant="h4"
+                            color="#3F2305"
+                            align="center"
+                            noWrap
+                            sx={{ flex: 1, paddingLeft: "7rem", fontWeight: "550" }}
+                        >
+                            {title}
+                        </Typography>
+                    </Grid>
+                </Grid>
                 <a href="https://www.vt.edu/" target="_blank" rel="noopener noreferrer">
                     <img
                         src={vv}

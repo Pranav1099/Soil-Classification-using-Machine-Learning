@@ -6,6 +6,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import ImageGrid from './imagegrid';
+import parse from 'html-react-parser';
 
 interface FeaturedPostProps {
     post: {
@@ -19,7 +20,7 @@ interface FeaturedPostProps {
 export default function FeaturedPost(props: FeaturedPostProps) {
     const { post } = props;
     const paragraphs = post.description.split('\n').map((paragraph, index) => (
-        <p key={index}>{paragraph}</p>
+        <p key={index}>{parse(paragraph)}</p>
     ));
     return (
         <Grid item xs={12} md={6} >
