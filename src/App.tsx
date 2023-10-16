@@ -88,7 +88,7 @@ function App() {
   }
 
   const mainFeaturedPost5 = {
-    title: 'Experiment and Results',
+    title: 'Experiments and Result Analysis',
     description: "\nThe <a href='https://www.kaggle.com/datasets/jayaprakashpondy/soil-image-dataset'>dataset</a> that we will be using consists of 4 classes and total of 1563 images"
     , linkText: 'dataset',
 

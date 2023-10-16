@@ -1,11 +1,9 @@
 import * as React from 'react';
 import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import vv from '../../static/vv.jpeg';
+import { Grid } from '@mui/material';
 
 interface HeaderProps {
     sections: Array<any>;
@@ -25,7 +23,7 @@ export default function Header(props: HeaderProps) {
                     color="#3F2305"
                     align="center"
                     noWrap
-                    sx={{ flex: 1, paddingLeft: "7.8rem", fontWeight: "550" }}
+                    sx={{ flex: 1, paddingLeft: "7rem", fontWeight: "550" }}
                 >
                     {title}
                 </Typography>
@@ -42,17 +40,23 @@ export default function Header(props: HeaderProps) {
                 variant="dense"
                 sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
             >
-                {sections?.map((section: any) => (
-                    <Link
-                        color="inherit"
-                        noWrap
-                        key={section.title}
-                        variant="subtitle1"
-                        sx={{ p: 1, flexShrink: 0, padding: "0rem 13rem" }}
-                    >
-                        {section.title}
-                    </Link>
-                ))}
+                <Grid container style={{ justifyContent: "space-between" }}>
+                    {sections?.map((section: any) => (
+
+                        <Grid item xs={12} sm={6} md={4} lg={3} style={{ display: "flex", justifyContent: "center" }}>
+                            <Link
+                                color="inherit"
+                                noWrap
+                                key={section.title}
+                                variant="subtitle1"
+                                sx={{ textAlign: "center" }}
+                            >
+                                {section.title}
+                            </Link>
+                        </Grid>
+
+                    ))}
+                </Grid>
             </Toolbar>}
         </React.Fragment>
     );
