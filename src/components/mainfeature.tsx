@@ -20,12 +20,15 @@ interface MainFeaturedPostProps {
         columns: Array<string>
         containerStyle: {}
         cellStyle: {}
-    }
+    };
+    variantStyle?: boolean
+
 
 }
 
 export default function MainFeaturedPost(props: MainFeaturedPostProps) {
-    const { post, images, childComponent, tableData } = props;
+    const { post, images, childComponent, tableData,variantStyle } = props;
+    // variantStyle = variantStyle ? variantStyle : "h5"
     const paragraphs = post.description.split('\n').map((paragraph, index) => (
         <p key={index}>{parse(paragraph)}</p>
     ));
@@ -61,7 +64,7 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
                                 pr: { md: 0 },
                             }}
                         >
-                            <Typography component="h2" variant="h5" color="inherit" gutterBottom>
+                            <Typography component="h2" variant = {variantStyle ? "h6" : "h5"} color="inherit" gutterBottom>
                                 <strong>{post.title}</strong>
                             </Typography>
                             <Typography className="text-body" variant="subtitle1" color="inherit" paragraph>

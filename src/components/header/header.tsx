@@ -2,7 +2,7 @@ import * as React from 'react';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import vv from '../../static/vv.jpeg';
+import vv from '../../static/logo_2.png';
 import { Grid } from '@mui/material';
 
 interface HeaderProps {
@@ -34,7 +34,7 @@ export default function Header(props: HeaderProps) {
                     <img
                         src={vv}
                         alt="VT Website Logo"
-                        style={{ width: '100px', height: 'auto' }}
+                        style={{ width: '160px', height: 'auto' }}
                     />
                 </a>
             </Toolbar>
