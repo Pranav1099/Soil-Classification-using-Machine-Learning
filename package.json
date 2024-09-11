@@ -2,7 +2,7 @@
   "name": "report",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Pranav1099.github.io/CV-Project",
+  "homepage": "https://Pranav1099.github.io/Soil-Classification-using-Machine-Learning",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
