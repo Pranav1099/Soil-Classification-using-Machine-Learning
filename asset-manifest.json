@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Soil-Classification-using-Machine-Learning/static/css/main.18f981f1.css",
-    "main.js": "/Soil-Classification-using-Machine-Learning/static/js/main.17bdc6df.js",
+    "main.js": "/Soil-Classification-using-Machine-Learning/static/js/main.b726c95e.js",
     "static/js/787.6af32225.chunk.js": "/Soil-Classification-using-Machine-Learning/static/js/787.6af32225.chunk.js",
     "static/media/teaser.png": "/Soil-Classification-using-Machine-Learning/static/media/teaser.9aae47fbf70713c7fa0f.png",
     "static/media/rf_aug.png": "/Soil-Classification-using-Machine-Learning/static/media/rf_aug.6dcc4ab4003c209e8ec6.png",
@@ -25,11 +25,11 @@
     "static/media/logo_2.png": "/Soil-Classification-using-Machine-Learning/static/media/logo_2.1729fc3b0ee86b0167bb.png",
     "index.html": "/Soil-Classification-using-Machine-Learning/index.html",
     "main.18f981f1.css.map": "/Soil-Classification-using-Machine-Learning/static/css/main.18f981f1.css.map",
-    "main.17bdc6df.js.map": "/Soil-Classification-using-Machine-Learning/static/js/main.17bdc6df.js.map",
+    "main.b726c95e.js.map": "/Soil-Classification-using-Machine-Learning/static/js/main.b726c95e.js.map",
     "787.6af32225.chunk.js.map": "/Soil-Classification-using-Machine-Learning/static/js/787.6af32225.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.18f981f1.css",
-    "static/js/main.17bdc6df.js"
+    "static/js/main.b726c95e.js"
   ]
 }
